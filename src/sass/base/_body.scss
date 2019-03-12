@@ -1,0 +1,37 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1.70rem;
+    }
+}
+
+h2 {
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 1.5rem;
+    }
+}
+
+a {
+    transition: 0.35s;
+}
+
+ul {
+    margin: 0;
+    @extend .list-unstyled;
+}
+
+img {
+    width: 100%;
+}

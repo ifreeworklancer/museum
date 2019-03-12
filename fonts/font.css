@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Book Antiqua';
+    src: url('BookAntiqua-Bold.eot');
+    src: url('BookAntiqua-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BookAntiqua-Bold.woff2') format('woff2'),
+        url('BookAntiqua-Bold.woff') format('woff'),
+        url('BookAntiqua-Bold.ttf') format('truetype'),
+        url('BookAntiqua-Bold.svg#BookAntiqua-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Bold.eot');
+    src: url('Lora-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Lora-Bold.woff2') format('woff2'),
+        url('Lora-Bold.woff') format('woff'),
+        url('Lora-Bold.ttf') format('truetype'),
+        url('Lora-Bold.svg#Lora-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.eot');
+    src: url('Lora-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff'),
+        url('Lora-Regular.ttf') format('truetype'),
+        url('Lora-Regular.svg#Lora-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

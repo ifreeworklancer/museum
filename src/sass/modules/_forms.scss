@@ -1,0 +1,76 @@
+.form-group {
+    position: relative;
+
+    &.in-focus {
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    .form-control {
+        padding: 10px 15px;
+        background: #fff;
+        border-radius: 0;
+        border: none;
+        color: $dark;
+    }
+
+    &--btn {
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        top: auto;
+        width: 0;
+        height: 2px;
+        background: $dark;
+        transition: .5s;
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-group {
+        width: 100%;
+        margin: 0 auto 30px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 30%;
+            margin: 0;
+        }
+
+        .btn {
+            height: 100%;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                padding: 0 $btn-padding-x;
+            }
+        }
+    }
+}
+
+.form-column {
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    &--min {
+        max-width: 315px;
+    }
+}
