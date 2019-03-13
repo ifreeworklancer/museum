@@ -81,6 +81,22 @@ window.jQuery = window.$ = jquery;
         }
     });
 
+    $('#btn-open-search').on('click', function (event) {
+        if ($(this).parents('.form-search').hasClass('is-active')) {
+            event.stopPropagation();
+            $(this).parents('.form-search').removeClass('is-active');
+        } else {
+            event.preventDefault();
+            $(this).parents('.form-search').addClass('is-active');
+        }
+    });
+
+    $('#btn-close-search').on('click', function (event) {
+            event.preventDefault();
+            $(this).parents('.form-search').removeClass('is-active');
+    });
+
+
     /**
      * Phone mask
      * @type {*|jQuery.fn.init|jQuery|HTMLElement}

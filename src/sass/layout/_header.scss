@@ -2,5 +2,168 @@
   position: fixed;
   top: 0;
   width: 100%;
+  background: rgba(56, 64, 73, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
   z-index: 999;
+
+  .navbar-brand {
+    img {
+      max-width: 210px;
+    }
+  }
+
+  .site-nav {
+    padding-right: 120px;
+  }
+
+  .navbar-nav {
+    position: relative;
+    z-index: 3;
+
+    li {
+
+      &:last-of-type {
+
+        a {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        color: #fff;
+        margin: 0 20px;
+        padding: 35px 0;
+        height: 100%;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          right: 50%;
+          bottom: -1px;
+          height: 2px;
+          background: $primary;
+          transition: .5s;
+        }
+
+        &:hover {
+
+          &::before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-search {
+  @extend %pos;
+  padding: 10px 0;
+
+  .form-group-search {
+    position: absolute;
+    width: 0;
+    right: 110px;
+    top: 10px;
+    bottom: 10px;
+    transition: .6s;
+    transition-delay: 0s;
+
+    input {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      background: #ECECEC;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 5px 0px 0px 5px;
+      border: none;
+      transition: .6s;
+      transition-delay: 0s;
+    }
+  }
+
+  .btn-search {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+
+
+    &-open {
+      width: 65px;
+      right: 0;
+      transition: .4s;
+      transition-delay: .6s;
+
+      svg {
+        position: relative;
+        z-index: 4;
+        fill: #fff;
+      }
+
+      &::before {
+        content: '';
+        @extend %pos;
+        right: 100%;
+        background: rgb(165, 170, 173);
+        border-radius: 0px 5px 5px 0px;
+        transition: .6s;
+        transition-delay: 0s;
+        z-index: 3;
+      }
+    }
+
+    &-close {
+      right: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: .4s;
+      transition-delay: 0s;
+    }
+  }
+
+  &.is-active {
+    z-index: 4;
+
+    .form-group-search {
+      width: 100%;
+      transition-delay: .4s;
+
+      input {
+        padding-left: 25px;
+        transition-delay: .4s;
+      }
+    }
+
+    .btn-search-open {
+      right: 45px;
+      transition:  .4s;
+      transition-delay: 0s;
+
+      &::before {
+        right: 0;
+        transition-delay: .4s;
+      }
+    }
+
+    .btn-search-close {
+      opacity: .5;
+      pointer-events: all;
+      transition-delay: .4s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
