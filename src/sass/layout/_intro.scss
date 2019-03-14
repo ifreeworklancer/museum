@@ -1,8 +1,93 @@
 #intro {
-  padding: 200px 0;
+  padding: 150px 0 170px;
   max-height: 1080px;
+  @extend %img;
 
   @media (min-width: map_get($grid-breakpoints, sm)) {
     height: 100vh;
+    padding: 0;
+  }
+
+  .intro-item {
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-left: 50px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      padding-left: 70px;
+    }
+
+    &-title {
+      font-size: 4rem;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: 7.5rem;
+      }
+    }
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  left: 35px;
+  bottom: -170px;
+  transform: translateX(-50%);
+  display: block;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    bottom: 0;
+  }
+
+  &__text {
+    position: absolute;
+    top: 10px;
+    left: -80px;
+    width: 130px;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #fff;
+    transform: rotate(-90deg);
+  }
+
+  &__icon {
+    position: relative;
+    width: 2px;
+    height: 130px;
+    background: rgba(#fff, .15);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 30px;
+      background: #fff;
+      box-shadow: 0px 2px 35px 8px rgba(255, 255, 255, 0.2);
+      animation: scrollDown 1.5s linear forwards infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        top: 0;
+      }
+
+      25% {
+        top: 25%;
+      }
+
+      50% {
+        top: 50%;
+      }
+
+      75% {
+        top: 75%;
+      }
+
+      100% {
+        top: 100%;
+      }
+    }
   }
 }

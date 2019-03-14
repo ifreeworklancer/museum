@@ -12,15 +12,12 @@ window.jQuery = window.$ = jquery;
      * Burger-menu
      */
     $('.burger-menu').click(function () {
-        var menu = $('.menu');
-        var menuMask = $('.menu-mask');
+        var menu = $('.collapse');
         $(this).toggleClass('active');
-        menu.toggleClass('active');
-        menuMask.toggleClass('active');
-        if ($(menu).hasClass('active')) {
-            $('.burger-menu-text').text("Закрыть");
+        if (menu.is(':visible')) {
+            menu.slideUp();
         } else {
-            $('.burger-menu-text').text("Меню");
+            menu.slideDown();
         }
     });
 
@@ -67,6 +64,14 @@ window.jQuery = window.$ = jquery;
     });
 
     /**
+     *  Lang
+     */
+    $('.language-list').on('click', function () {
+        $(this).toggleClass('is-active');
+    });
+
+
+    /**
      * Form
      */
     $('.form-control').on('focus', function () {
@@ -92,8 +97,8 @@ window.jQuery = window.$ = jquery;
     });
 
     $('#btn-close-search').on('click', function (event) {
-            event.preventDefault();
-            $(this).parents('.form-search').removeClass('is-active');
+        event.preventDefault();
+        $(this).parents('.form-search').removeClass('is-active');
     });
 
 

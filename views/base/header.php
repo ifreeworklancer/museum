@@ -36,16 +36,21 @@
 <header id="app-header">
     <div class="container-fluid">
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <a class="navbar-brand ml-5" href="/">
+            <nav class="navbar navbar-expand-lg navbar-light pl-3 pr-3 pl-lg-4 pl-lg3 w-100">
+                <a class="navbar-brand" href="/">
                     <img src="../../images/icon/logo.png" alt="logo">
                 </a>
-                <div class="burger-menu">
+                <ul class="language-list d-block ml-0 d-lg-none">
+                    <li><a href="#">ru</a></li>
+                    <li><a href="#">ua</a></li>
+                    <li><a href="#">en</a></li>
+                </ul>
+                <div class="burger-menu d-flex d-lg-none flex-column justify-content-between mr-2">
                     <div class="line line--top"></div>
                     <div class="line line--middle"></div>
                     <div class="line line--bottom"></div>
                 </div>
-                <div class="collapse navbar-collapse justify-content-end">
+                <div class="collapse navbar-collapse justify-content-end align-items-center">
                     <div class="site-nav position-relative">
                         <ul class="navbar-nav">
                             <?php
@@ -72,6 +77,11 @@
                             </a>
                         </form>
                     </div>
+                    <ul class="language-list d-none d-lg-block">
+                        <li><a href="#">ru</a></li>
+                        <li><a href="#">ua</a></li>
+                        <li><a href="#">en</a></li>
+                    </ul>
                 </div>
             </nav>
         </div>

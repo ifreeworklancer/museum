@@ -5,19 +5,33 @@
   background: rgba(56, 64, 73, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
   z-index: 999;
+  padding: 5px 0;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 0;
+  }
 
   .navbar-brand {
     img {
-      max-width: 210px;
+      max-width: 150px;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        max-width: 210px;
+      }
     }
   }
 
   .site-nav {
-    padding-right: 120px;
+    padding: 20px 0 105px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding: 0 129px 0 0;
+    }
   }
 
   .navbar-nav {
     position: relative;
+    align-items: center;
     z-index: 3;
 
     li {
@@ -31,11 +45,22 @@
 
       a {
         position: relative;
+        text-align: center;
         display: block;
         color: #fff;
-        margin: 0 20px;
-        padding: 35px 0;
+        padding: 15px 0;
         height: 100%;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+          margin: 0 15px;
+          font-size: 14px;
+          padding: 35px 0;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+          margin: 0 20px;
+          font-size: $font-size-base;
+        }
 
         &::before {
           content: '';
@@ -43,7 +68,7 @@
           left: 50%;
           right: 50%;
           bottom: -1px;
-          height: 2px;
+          height: 0;
           background: $primary;
           transition: .5s;
         }
@@ -53,117 +78,89 @@
           &::before {
             left: 0;
             right: 0;
+            height: 2px;
           }
         }
       }
     }
   }
-}
 
-.form-search {
-  @extend %pos;
-  padding: 10px 0;
+  .language-list {
+    position: relative;
+    margin-left: 50px;
+    padding-right: 15px;
+    cursor: pointer;
 
-  .form-group-search {
-    position: absolute;
-    width: 0;
-    right: 110px;
-    top: 10px;
-    bottom: 10px;
-    transition: .6s;
-    transition-delay: 0s;
-
-    input {
-      width: 100%;
-      height: 100%;
-      outline: none;
-      background: #ECECEC;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-      border-radius: 5px 0px 0px 5px;
-      border: none;
-      transition: .6s;
-      transition-delay: 0s;
-    }
-  }
-
-  .btn-search {
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background: transparent;
-    border: none;
-    outline: none;
-
-
-    &-open {
-      width: 65px;
-      right: 0;
-      transition: .4s;
-      transition-delay: .6s;
-
-      svg {
-        position: relative;
-        z-index: 4;
-        fill: #fff;
-      }
-
-      &::before {
-        content: '';
-        @extend %pos;
-        right: 100%;
-        background: rgb(165, 170, 173);
-        border-radius: 0px 5px 5px 0px;
-        transition: .6s;
-        transition-delay: 0s;
-        z-index: 3;
-      }
-    }
-
-    &-close {
-      right: 10px;
+    li {
+      position: relative;
       opacity: 0;
       pointer-events: none;
-      transition: .4s;
-      transition-delay: 0s;
-    }
-  }
+      transition: .5s;
 
-  &.is-active {
-    z-index: 4;
+      &:first-of-type {
+        top: 24px;
+      }
 
-    .form-group-search {
-      width: 100%;
-      transition-delay: .4s;
+      &:nth-of-type(2) {
+        opacity: 1;
+        pointer-events: all;
+      }
 
-      input {
-        padding-left: 25px;
-        transition-delay: .4s;
+      &:last-of-type {
+        bottom: 24px;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        color: #fff;
+        transition: .5s;
+
+        &:hover {
+          color: $primary;
+        }
       }
     }
 
-    .btn-search-open {
-      right: 45px;
-      transition:  .4s;
-      transition-delay: 0s;
+    &.is-active {
+
+      li {
+        pointer-events: all;
+        opacity: 1;
+        &:first-of-type {
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+
+          a {
+            color: $primary;
+          }
+        }
+
+        &:last-of-type {
+          bottom: 0;
+        }
+      }
 
       &::before {
-        right: 0;
-        transition-delay: .4s;
+        transform: translateY(-50%) rotate(180deg);
       }
     }
 
-    .btn-search-close {
-      opacity: .5;
-      pointer-events: all;
-      transition-delay: .4s;
-
-      &:hover {
-        opacity: 1;
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 52%;
+      transform: translateY(-50%) rotate(0);
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: $primary transparent transparent transparent;
+      transition: .5s;
     }
   }
 }

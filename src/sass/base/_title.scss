@@ -1,0 +1,44 @@
+.section-description {
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  z-index: 5;
+
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+  }
+
+  &::before {
+    width: 70px;
+    height: 2px;
+    background: $primary;
+    z-index: 3;
+  }
+
+  &::after {
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #CECECE;
+    z-index: 2;
+  }
+
+  &--start {
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &--center {
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}

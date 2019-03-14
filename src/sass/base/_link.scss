@@ -1,0 +1,21 @@
+.link-more {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 1px;
+    background: $primary;
+    transition: .5s;
+  }
+
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
