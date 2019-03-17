@@ -1,0 +1,42 @@
+#about {
+  padding: 50px 0;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 110px 0;
+  }
+
+  .about-img {
+    position: relative;
+    padding-top: 300px;
+    @extend %img;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-top: 500px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -100px;
+      bottom: 80px;
+      width: 185px;
+      background: rgba($primary, .5);
+      z-index: -2;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        display: block;
+      }
+    }
+  }
+
+  .about-item {
+    margin-top: 50px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-top: 120px;
+    }
+  }
+}
+

@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <a href="#services" class="scroll-down scroll-link">
+        <a href="#about" class="scroll-down scroll-link">
             <div class="scroll-down__text">
                 скролл вниз
             </div>
