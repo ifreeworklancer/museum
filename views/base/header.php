@@ -16,9 +16,18 @@
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;top: -999999px;">
-    <filter id="catalog-blur" width="100%" height="100%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-    </filter>
+    <defs>
+        <linearGradient id="bg-gradient" gradientUnits="userSpaceOnUse" x1="30.71%" y1="-9.89%" x2="69.29%" y2="109.89%">
+            <stop offset=".26" stop-color="#000" stop-opacity=".5"/>
+            <stop offset="1.11" stop-color="#fffcfc" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <defs>
+        <linearGradient id="text-gradient" gradientUnits="userSpaceOnUse" x1="-9.6%" y1="32.28%" x2="109.6%" y2="67.72%">
+            <stop offset=".12" stop-color="#ff9244" stop-opacity=".5"/>
+            <stop offset=".66" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
 </svg>
 
 

@@ -26,4 +26,13 @@
             <div class="scroll-down__icon"></div>
         </a>
     </div>
+    <svg class="decor-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+                <text id="text" x="130" y="90">X</text>
+            </mask>
+        </defs>
+        <rect id="overlay" x="0" y="0" width="100%" height="100%" fill="url(#bg-gradient)"/>
+    </svg>
 </section>
