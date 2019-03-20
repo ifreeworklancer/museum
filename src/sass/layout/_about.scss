@@ -1,7 +1,7 @@
 #about {
-  padding: 50px 0;
+  padding: 35px 0;
 
-  @media (min-width: map_get($grid-breakpoints, sm)) {
+  @media (min-width: map_get($grid-breakpoints, lg)) {
     padding: 110px 0;
   }
 
@@ -11,6 +11,10 @@
     @extend %img;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-top: 400px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
       padding-top: 500px;
     }
 
@@ -25,7 +29,7 @@
       z-index: -2;
       display: none;
 
-      @media (min-width: map_get($grid-breakpoints, sm)) {
+      @media (min-width: map_get($grid-breakpoints, lg)) {
         display: block;
       }
     }
@@ -34,8 +38,13 @@
   .about-item {
     margin-top: 50px;
 
-    @media (min-width: map_get($grid-breakpoints, sm)) {
+    @media (min-width: map_get($grid-breakpoints, lg)) {
       margin-top: 120px;
+      padding-left: 30px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+      padding-left: 60px;
     }
   }
 }

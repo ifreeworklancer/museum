@@ -1,5 +1,5 @@
 #catalog {
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .catalog-item {
@@ -10,7 +10,7 @@
   overflow: hidden;
   justify-content: center;
 
-  @media (min-width: map_get($grid-breakpoints, sm)) {
+  @media (min-width: map_get($grid-breakpoints, lg)) {
     justify-content: flex-start;
   }
 
@@ -50,7 +50,7 @@
     background-position: inherit;
     filter: blur(3px);
 
-    @media (min-width: map_get($grid-breakpoints, sm)) {
+    @media (min-width: map_get($grid-breakpoints, lg)) {
       left: auto;
       transform: translateX(0);
     }

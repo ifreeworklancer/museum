@@ -12,6 +12,19 @@
     transition: .5s;
   }
 
+  &--dark {
+    color: $dark;
+
+    &::before {
+      background: $dark;
+    }
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+
   &:hover {
 
     &::before {

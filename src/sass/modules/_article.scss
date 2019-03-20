@@ -1,0 +1,56 @@
+$padding-y: 30px;
+$padding-x: 25px;
+
+.article-item {
+  position: relative;
+  margin: 0 auto 3rem;
+  max-width: 350px;
+  background: #fff;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  &-header {
+
+    &__img {
+      @extend %img;
+      height: 190px;
+    }
+  }
+
+  &-body {
+    padding: $padding-y $padding-x;
+
+    &__data {
+      font-size: .875rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #888;
+    }
+
+    h4 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: $padding-x;
+    bottom: 0;
+    width: 55px;
+    height: 4px;
+    background: $primary;
+    transition: .5s;
+  }
+}

@@ -1,8 +1,27 @@
+
 .btn {
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: $brown;
+    color: #433530;
     z-index: 5;
+
+    &:hover {
+        box-shadow: 0px 5px 15px rgba(67, 53, 49, 0.5);
+        color: #433530;
+    }
+
+    &-primary {color: #433530;
+        background: linear-gradient(180deg, #FDE8B8 0%, #FFD183 99.99%);
+    }
+
+    &-secondary {
+        color: $primary;
+        background: linear-gradient(180deg, #78635C 0%, #433531 100%);
+
+        &:hover {
+            color: $primary;
+        }
+    }
 }
