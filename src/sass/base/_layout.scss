@@ -1,0 +1,25 @@
+.social-list {
+  display: flex;
+
+  li {
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+      svg {
+        fill: #fff;
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@
 
   .intro-item {
     position: relative;
-    z-index: 5;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
       padding-left: 50px;
@@ -33,17 +32,17 @@
     @extend %pos;
     width: 100%;
     height: 100%;
-    z-index: 4;
-    display: none;
-
-    @media (min-width: map_get($grid-breakpoints, xl)) {
-      display: block;
-    }
+    z-index: -1;
 
     #text {
       position: relative;
       font-family: $headings-font-family;
       animation: decorSymbol 1.2s ease-in-out forwards 1;
+      display: none;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        display: block;
+      }
 
       @media (min-width: 1200px) {
         font-size: 14vw;
@@ -69,16 +68,6 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-    }
-  }
-
-  &::before {
-    content: '';
-    @extend %pos;
-    background: linear-gradient(162.15deg, rgba(0, 0, 0, 0.5) 25.86%, rgba(255, 252, 252, 0) 110.58%);
-    display: block;
-    @media (min-width: map_get($grid-breakpoints, xl)) {
-      display: none;
     }
   }
 }

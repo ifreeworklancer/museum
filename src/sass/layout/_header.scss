@@ -2,10 +2,25 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(56, 64, 73, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
+  background: rgba(56, 64, 73, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 999;
   padding: 5px 0;
+  transition: .5s;
+
+  &.is-fixed {
+    background: rgba(56, 64, 73, 0.6);
+
+    .site-nav {
+
+      li {
+
+        a {
+          padding: 30px 0;
+        }
+      }
+    }
+  }
 
   @media (min-width: map_get($grid-breakpoints, lg)) {
     padding: 0;
@@ -128,6 +143,7 @@
       li {
         pointer-events: all;
         opacity: 1;
+
         &:first-of-type {
           top: 0;
         }
@@ -162,5 +178,6 @@
       border-color: $primary transparent transparent transparent;
       transition: .5s;
     }
+
   }
 }

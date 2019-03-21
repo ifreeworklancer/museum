@@ -53,9 +53,8 @@ window.jQuery = window.$ = jquery;
 
     $(window).on('scroll', function () {
         $('.burger-menu').removeClass('active');
-        $('.burger-menu-text').text("Меню");
-        $('.menu').removeClass('active');
-        $('.menu-mask').removeClass('active');
+        $('.menu').slideUp('active');
+        $('.form-search').removeClass('is-active');
         if ($(this).scrollTop() > 20) {
             $('#app-header').addClass('is-fixed');
         } else {
@@ -93,6 +92,7 @@ window.jQuery = window.$ = jquery;
         } else {
             event.preventDefault();
             $(this).parents('.form-search').addClass('is-active');
+            $('#control-search').focus();
         }
     });
 
