@@ -10,11 +10,10 @@
         </div>
         <div class="row">
             <?php
-            $count = 1;
-            foreach ($catalog['item'] as $item) : ?>
-                <?php $count++ ?>
+            $count = 0;
+            foreach ($catalog['item'] as $item) : $count++ ?>
                 <div class="col-lg-6 p-0">
-                    <div class="catalog-item <?php if ($count % 2 == 0) echo 'catalog-item--end'; elseif ($count % 2 != 0) echo 'catalog-item--start'; ?>"
+                    <div class="catalog-item <?php if ($count % 2 == 0) echo 'catalog-item--start'; elseif ($count % 2 != 0) echo 'catalog-item--end'; ?>"
                          style="background-image:url('<?= $item['image']; ?>');">
                         <div class="filter-blur"></div>
                         <div class="catalog-item-description">

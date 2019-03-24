@@ -51,7 +51,7 @@
     </div>
     <div class="footer-copyr">
         <div class="container">
-            <div class="row flex-column flex-sm-row justify-content-between align-items-center">
+            <div class="row flex-column flex-sm-row justify-content-between align-items-center px-3">
                 <div class="footer-copyr-item mb-3 mb-sm-0">
                     2019 © Усі права захищені
                 </div>
@@ -87,7 +87,7 @@
 </footer>
 
 <!-- Script -->
-<script src="dist/app.js"></script>
+<script src="../../dist/app.js"></script>
 </body>
 
 </html>

@@ -200,31 +200,16 @@ window.jQuery = window.$ = jquery;
     /**
      * Animate scroll
      */
-    // ScrollReveal().reveal('.intro-item', {
-    //     origin: 'left',
-    //     delay: 400,
-    //     distance: '200px',
-    // });
-    // ScrollReveal().reveal('.intro-order', {
-    //     origin: 'right',
-    //     delay: 400,
-    //     distance: '200px',
-    // });
-    // ScrollReveal().reveal('.pain-item', {
-    //     origin: 'left',
-    //     delay: 400,
-    //     distance: '200px',
-    // });
-    // ScrollReveal().reveal('.pain-beforeAfter', {
-    //     origin: 'right',
-    //     delay: 400,
-    //     distance: '200px',
-    // });
-    // ScrollReveal().reveal('.response-item', {
-    //     origin: 'bottom',
-    //     delay: 400,
-    //     distance: '200px',
-    // });
+    ScrollReveal().reveal('.catalog-item', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px',
+    }, 300);
+    ScrollReveal().reveal('#latest-news .article-item', {
+        origin: 'bottom',
+        delay: 400,
+        distance: '200px',
+    });
 
 
 })(jQuery)

@@ -9,8 +9,8 @@
         <?= $app_title ?>
     </title>
 
-    <link rel="stylesheet" href="fonts/font.css">
-    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="../../fonts/font.css">
+    <link rel="stylesheet" href="../../dist/app.css">
 </head>
 
 <body>
@@ -31,7 +31,6 @@
         </linearGradient>
     </defs>
 </svg>
-
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="search-icon" viewBox="0 0 31 31">
@@ -120,9 +119,6 @@
         </div>
     </div>
 </header>
-
-<!-- Modal -->
-<?php include(__DIR__ . '/../modules/modal.php'); ?>
 
 <!-- Main -->
 <main>
