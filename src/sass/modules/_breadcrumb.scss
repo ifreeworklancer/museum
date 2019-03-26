@@ -1,0 +1,25 @@
+.breadcrumb {
+
+  li {
+    font-size: .75rem;
+    color: #fff;
+
+    &.active {
+      color: #DABFB5;
+    }
+
+    a {
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  margin: 0 5px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-left: 4px solid $primary;
+  border-bottom: 4px solid transparent;
+}

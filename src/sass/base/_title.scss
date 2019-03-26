@@ -41,4 +41,11 @@
     }
   }
 
+  .icon {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    @extend %img;
+  }
+
 }

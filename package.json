@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "flickity": "^2.2.0",
+    "flickity-as-nav-for": "^2.0.1",
     "imagesloaded": "^4.1.4",
     "imask": "^4.1.5",
     "imports-loader": "^0.8.0",

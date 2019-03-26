@@ -61,6 +61,15 @@
         <path d="m181 94.507812v203.898438l180.5-103.621094zm30 50.984376 89.5 49.722656-89.5 51.378906zm0 0"/>
     </symbol>
 
+    <svg id="slider-arrow-prev" viewBox="0 0 8 12" >
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3999 10.6L5.9999 12L-9.72271e-05 6L5.9999 -1.22392e-07L7.3999 1.4L2.7999 6L7.3999 10.6Z" />
+    </svg>
+
+    <symbol id="slider-arrow-next" viewBox="0 0 8 12">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4L1.4 0L7.4 6L1.4 12L0 10.6L4.6 6L0 1.4Z"/>
+    </symbol>
+
+
 </svg>
 
 

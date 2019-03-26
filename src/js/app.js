@@ -1,7 +1,7 @@
 import jquery from 'jquery';
 import Flickity from 'flickity';
+import 'flickity-as-nav-for';
 import ScrollReveal from 'scrollreveal';
-import 'flickity/dist/flickity.css';
 import IMask from 'imask';
 
 window.jQuery = window.$ = jquery;
@@ -167,33 +167,43 @@ window.jQuery = window.$ = jquery;
 
 
     /**
-     * Sliders
+     * Sliders gallery
      */
 
-    if ($('.reviews-slider')) {
+    var elem1 = document.querySelector('.object-slider');
+    var galleryNavFor = document.querySelector('.object-asNavFor-slider');
 
-        let elem2 = document.querySelector('.reviews-slider');
-        if (elem2) {
+    if (elem1 && galleryNavFor) {
+        var flkty1 = new Flickity(elem1, {
+            prevNextButtons: false,
+            cellAlign: 'left',
+            contain: true,
+            draggable: false,
+            pageDots: false,
+            wrapAround: true,
+            cellSelector: '.object-slider-item'
+        });
 
-            const flkty2 = new Flickity(elem2, {
-                prevNextButtons: false,
-                cellAlign: 'center',
-                contain: true,
-                draggable: false,
-                wrapAround: true,
-                adaptiveHeight: true
-            });
+        var navFor = new Flickity(galleryNavFor, {
+            asNavFor: elem1,
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            prevNextButtons: false,
+            wrapAround: true,
+        });
 
-            var prevArrowReviews = document.querySelector('.slider-arrow-item--prev-reviews');
-            prevArrowReviews.addEventListener('click', function () {
-                flkty2.previous(false, false);
-            });
+        var prevArrowObject = document.querySelector('.slider-arrow-item--prev--object');
 
-            var nextArrowReviews = document.querySelector('.slider-arrow-item--next-reviews');
-            nextArrowReviews.addEventListener('click', function () {
-                flkty2.next(false, false);
-            });
-        }
+        prevArrowObject.addEventListener('click', function () {
+            flkty1.previous(true, false);
+        });
+
+        var nextArrowObject = document.querySelector('.slider-arrow-item--next--object');
+
+        nextArrowObject.addEventListener('click', function () {
+            flkty1.next(true, false);
+        });
     }
 
 

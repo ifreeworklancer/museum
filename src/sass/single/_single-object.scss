@@ -1,0 +1,49 @@
+#single-object {
+
+  .object-intro {
+
+    &-item {
+      position: relative;
+      padding: 200px 5%;
+      @extend %img;
+      color: #fff;
+      z-index: 2;
+
+      p {
+        max-width: 380px;
+        margin-left: auto;
+        line-height: 1.9;
+      }
+
+      &::before {
+        content: '';
+        @extend %pos;
+        background: rgba(#433531,.6);
+        z-index: -1;
+      }
+    }
+  }
+
+  .object-content {
+    padding: 100px 0;
+    .object-slider {
+      width: 100%;
+
+      &-item {
+        width: 100%;
+        padding-top: 80%;
+        @extend %img;
+      }
+    }
+
+    .object-asNavFor-slider {
+      width: 100%;
+
+      &-item {
+        width: 20%;
+        padding-top: 100px;
+        @extend %img;
+      }
+    }
+  }
+}
