@@ -11,7 +11,7 @@ require_once('../header.php');
         <div class="object-intro secondary-page-intro">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6 col-lg-5 col-xl-4 order-2 order-sm-1">
                         <div class="object-intro-item"
                              style="background-image: url(<?= $single_object['intro_item_img']; ?>);">
                             <nav aria-label="breadcrumb">
@@ -33,8 +33,8 @@ require_once('../header.php');
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <div id="object-maps"></div>
+                    <div class="col-sm-6 col-lg-7 col-xl-8 order-1 order-sm-2">
+                        <div id="object-maps" class="mapbox-maps"></div>
                     </div>
                 </div>
             </div>
@@ -43,31 +43,34 @@ require_once('../header.php');
             <div class="container-fluid">
                 <div class="row justify-content-around no-gutters">
                     <div class="col-sm-5">
-                        <div class="object-slider">
-                            <?php foreach ($single_object['slider'] as $item) : ?>
-                                <div class="object-slider-item" style="background-image: url('<?= $item; ?>');"></div>
-                            <?php endforeach; ?>
-                            <div class="slider-arrow">
-                                <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev--object">
-                                    <svg width="20" height="20">
-                                        <use xlink:href="#slider-arrow-prev"></use>
-                                    </svg>
-                                </div>
-                                <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next--object">
-                                    <svg width="20" height="20">
-                                        <use xlink:href="#slider-arrow-next"></use>
-                                    </svg>
+                        <div class="object-slider-wrapper">
+                            <div class="object-slider">
+                                <?php foreach ($single_object['slider'] as $item) : ?>
+                                    <div class="object-slider-item"
+                                         style="background-image: url('<?= $item; ?>');"></div>
+                                <?php endforeach; ?>
+                                <div class="slider-arrow">
+                                    <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev--object">
+                                        <svg width="20" height="20">
+                                            <use xlink:href="#slider-arrow-prev"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next--object">
+                                        <svg width="20" height="20">
+                                            <use xlink:href="#slider-arrow-next"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="object-asNavFor-slider">
-                            <?php foreach ($single_object['slider'] as $item) : ?>
-                                <div class="object-asNavFor-slider-item"
-                                     style="background-image: url('<?= $item; ?>');"></div>
-                            <?php endforeach; ?>
+                            <div class="object-asNavFor-slider">
+                                <?php foreach ($single_object['slider'] as $item) : ?>
+                                    <div class="object-asNavFor-slider-item"
+                                         style="background-image: url('<?= $item; ?>');"></div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-5 col-xl-4">
                         <h2 class="title">
                             <?= $single_object['content_title']; ?>
                         </h2>
@@ -99,6 +102,8 @@ require_once('../header.php');
     </section>
 
 <?php
+
+require_once('../views/sections/places-nearby.php');
 
 require_once('../views/sections/latest-news.php');
 

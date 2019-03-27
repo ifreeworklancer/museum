@@ -221,5 +221,17 @@ window.jQuery = window.$ = jquery;
         distance: '200px',
     });
 
+    //Map
+    var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
+    var map = new mapboxgl.Map({
+        container: 'object-maps',
+        style: 'mapbox://styles/mapboxusermuseum/cjtrlhqn51yon1fn0akbdjjf2',
+        center: [-71.020000, 42.362400],
+        zoom: 10.0,
+        scrollZoom: false
+    });
+
 
 })(jQuery)

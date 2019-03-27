@@ -9,6 +9,7 @@
         <?= $app_title ?>
     </title>
 
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../../fonts/font.css">
     <link rel="stylesheet" href="../../dist/app.css">
 </head>

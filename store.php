@@ -109,3 +109,33 @@ $single_object = [
     ],
     'content_title' => 'Про Скіфський стан',
 ];
+
+$places_nearby = [
+    'title' => 'Місця поблизу',
+    'item' => [
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-1.svg',
+            'title' => 'Назва місця',
+        ],
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-2.png',
+            'title' => 'Назва місця',
+        ],
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-3.svg',
+            'title' => 'Назва місця',
+        ],
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-2.png',
+            'title' => 'Назва місця',
+        ],
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-3.svg',
+            'title' => 'Назва місця',
+        ],
+        [
+            'image' => '../../images/icon/places-nearby/places-nearby-1.svg',
+            'title' => 'Назва місця',
+        ],
+    ],
+];

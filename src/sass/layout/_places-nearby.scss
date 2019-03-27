@@ -1,0 +1,23 @@
+#places-nearby {
+  padding: 0 0 50px;
+}
+
+.places-nearby-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  color: $dark;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    justify-content: flex-start;
+  }
+
+  .icon {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    @extend %img;
+    background-size: contain;
+  }
+}
