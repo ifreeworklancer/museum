@@ -110,6 +110,22 @@ $single_object = [
     'content_title' => 'Про Скіфський стан',
 ];
 
+$single_article = [
+    'intro_bg_img' => '../../images/content/single/article/article-bg.jpg',
+    'main_title' => 'Культурна чайна',
+    'slider' => [
+        '../images/content/main/catalog/catalog-1.jpg',
+        '../images/content/main/catalog/catalog-2.jpg',
+        '../images/content/main/catalog/catalog-3.jpg',
+        '../images/content/main/catalog/catalog-4.jpg',
+        '../images/content/main/catalog/catalog-5.jpg',
+        '../images/content/main/catalog/catalog-6.jpg',
+        '../images/content/main/catalog/catalog-7.jpg',
+    ],
+    'article_content_data' => '28.03.2019',
+    'article_content_title' => 'Культурна чайна',
+];
+
 $places_nearby = [
     'title' => 'Місця поблизу',
     'item' => [

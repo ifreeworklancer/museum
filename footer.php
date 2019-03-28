@@ -55,7 +55,7 @@
                 <div class="footer-copyr-item mb-3 mb-sm-0">
                     2019 © Усі права захищені
                 </div>
-                <ul class="social-list mb-3 mb-sm-0">
+                <ul class="social-list social-list--white mb-3 mb-sm-0">
                     <li>
                         <a href="#">
                             <svg width="20" height="20">

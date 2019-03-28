@@ -22,4 +22,35 @@
       }
     }
   }
+
+  &--white {
+
+    li {
+
+      a {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &--gray {
+
+    li {
+
+      a {
+        svg {
+          fill: #888;
+        }
+      }
+    }
+  }
+}
+
+.data-in-article {
+  font-size: .875rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #888;
 }

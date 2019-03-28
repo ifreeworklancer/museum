@@ -206,6 +206,31 @@ window.jQuery = window.$ = jquery;
         });
     }
 
+    var elem2 = document.querySelector('.article-slider');
+
+    if (elem2) {
+        var flkty2 = new Flickity(elem2, {
+            prevNextButtons: false,
+            cellAlign: 'left',
+            contain: true,
+            draggable: true,
+            pageDots: false,
+            wrapAround: true,
+        });
+
+        var prevArrowArticle = document.querySelector('.slider-arrow-item--prev--article');
+
+        prevArrowArticle.addEventListener('click', function () {
+            flkty2.previous(true, false);
+        });
+
+        var nextArrowArticle = document.querySelector('.slider-arrow-item--next--article');
+
+        nextArrowArticle.addEventListener('click', function () {
+            flkty2.next(true, false);
+        });
+    }
+
 
     /**
      * Animate scroll
@@ -222,16 +247,18 @@ window.jQuery = window.$ = jquery;
     });
 
     //Map
-    var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+    if($('#object-maps').length > 0) {
+        var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
-    var map = new mapboxgl.Map({
-        container: 'object-maps',
-        style: 'mapbox://styles/mapboxusermuseum/cjtrlhqn51yon1fn0akbdjjf2',
-        center: [-71.020000, 42.362400],
-        zoom: 10.0,
-        scrollZoom: false
-    });
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';
+        var map = new mapboxgl.Map({
+            container: 'object-maps',
+            style: 'mapbox://styles/mapboxusermuseum/cjtrlhqn51yon1fn0akbdjjf2',
+            center: [-71.020000, 42.362400],
+            zoom: 10.0,
+            scrollZoom: false
+        });
+    }
 
 
 })(jQuery)

@@ -18,7 +18,7 @@
                                  style="background-image: url('<?= $item['image']; ?>');"></div>
                         </div>
                         <div class="article-item-body">
-                            <div class="article-item-body__data"><?= $item['data']; ?></div>
+                            <div class="data-in-article"><?= $item['data']; ?></div>
                             <h4><?= $item['title']; ?></h4>
                             <p><?= $item['description']; ?></p>
                             <a href="#" class="link-more link-more--dark">Читати повністю</a>
