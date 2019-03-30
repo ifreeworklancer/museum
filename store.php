@@ -66,7 +66,7 @@ $catalog = [
             'title' => 'Протовче',
             'icon' => '../../images/icon/catalog/catalog-8.svg',
         ],
-    ]
+    ],
 ];
 
 $latest_news = [
@@ -90,7 +90,7 @@ $latest_news = [
             'title' => 'Культурна чайна',
             'description' => 'Сьогодні в нашій філії - "Музеї міста за поргами" традиційно панувала затишна святкова атмосфера. Разом з Запорізьким осередком ВГО "Союз Українок" на чолі з оксаною Яценко відзначали православне свято Катерини',
         ],
-    ]
+    ],
 ];
 
 $single_object = [
@@ -152,6 +152,134 @@ $places_nearby = [
         [
             'image' => '../../images/icon/places-nearby/places-nearby-1.svg',
             'title' => 'Назва місця',
+        ],
+    ],
+];
+
+$catalog_news = [
+    'intro_bg_img' => '../../images/content/single/article/article-bg.jpg',
+    'main_title' => 'Новини',
+    'item' => [
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-1.jpg',
+            'data' => '20.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Національний заповідник «Хортиця» відкрив осередок дозвілля та просвітництва «Культурна чайна» — клуб спілкування для людей похилого віку. Клубна система проведення дозвілля була дуже поширена у минулому. Зокрема у Запоріжжі, під час зведення промислового комплексу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-2.jpg',
+            'data' => '20.03.2018',
+            'title' => 'Святий Миколай на Хортиці',
+            'description' => 'На Хортицю прибув сам Святий Миколай! А куди ж ще він мав приїхати як не в обійстя українських традицій, духовності та в саме серце святкової атмосфери? Тільки на Хортицю! Запрошуємо малечу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-3.jpg',
+            'data' => '19.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Сьогодні в нашій філії - "Музеї міста за поргами" традиційно панувала затишна святкова атмосфера. Разом з Запорізьким осередком ВГО "Союз Українок" на чолі з оксаною Яценко відзначали православне свято Катерини',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-1.jpg',
+            'data' => '20.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Національний заповідник «Хортиця» відкрив осередок дозвілля та просвітництва «Культурна чайна» — клуб спілкування для людей похилого віку. Клубна система проведення дозвілля була дуже поширена у минулому. Зокрема у Запоріжжі, під час зведення промислового комплексу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-3.jpg',
+            'data' => '19.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Сьогодні в нашій філії - "Музеї міста за поргами" традиційно панувала затишна святкова атмосфера. Разом з Запорізьким осередком ВГО "Союз Українок" на чолі з оксаною Яценко відзначали православне свято Катерини',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-2.jpg',
+            'data' => '20.03.2018',
+            'title' => 'Святий Миколай на Хортиці',
+            'description' => 'На Хортицю прибув сам Святий Миколай! А куди ж ще він мав приїхати як не в обійстя українських традицій, духовності та в саме серце святкової атмосфери? Тільки на Хортицю! Запрошуємо малечу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-2.jpg',
+            'data' => '20.03.2018',
+            'title' => 'Святий Миколай на Хортиці',
+            'description' => 'На Хортицю прибув сам Святий Миколай! А куди ж ще він мав приїхати як не в обійстя українських традицій, духовності та в саме серце святкової атмосфери? Тільки на Хортицю! Запрошуємо малечу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-1.jpg',
+            'data' => '20.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Національний заповідник «Хортиця» відкрив осередок дозвілля та просвітництва «Культурна чайна» — клуб спілкування для людей похилого віку. Клубна система проведення дозвілля була дуже поширена у минулому. Зокрема у Запоріжжі, під час зведення промислового комплексу',
+        ],
+        [
+            'image' => '../../images/content/main/latest-news/latest-news-3.jpg',
+            'data' => '19.03.2019',
+            'title' => 'Культурна чайна',
+            'description' => 'Сьогодні в нашій філії - "Музеї міста за поргами" традиційно панувала затишна святкова атмосфера. Разом з Запорізьким осередком ВГО "Союз Українок" на чолі з оксаною Яценко відзначали православне свято Катерини',
+        ],
+    ],
+];
+
+$catalog_object = [
+    'intro_bg_img' => '../../images/content/single/article/article-bg.jpg',
+    'main_title' => 'Туристичні об’єкти',
+    'item' => [
+        [
+            'image' => '../../images/content/main/catalog/catalog-1.jpg',
+            'title' => 'Запорізька Січ',
+            'icon' => '../../images/icon/catalog/catalog-1.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-2.jpg',
+            'title' => 'Святилище',
+            'icon' => '../../images/icon/catalog/catalog-2.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-3.jpg',
+            'title' => 'Скіфський стан',
+            'icon' => '../../images/icon/catalog/catalog-3.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-4.jpg',
+            'title' => 'Дендропарк',
+            'icon' => '../../images/icon/catalog/catalog-4.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-5.jpg',
+            'title' => 'Музей',
+            'icon' => '../../images/icon/catalog/catalog-5.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-6.jpg',
+            'title' => 'Козацькі човни',
+            'icon' => '../../images/icon/catalog/catalog-6.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-7.jpg',
+            'title' => 'Кам’янська Січ',
+            'icon' => '../../images/icon/catalog/catalog-7.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-8.jpg',
+            'title' => 'Протовче',
+            'icon' => '../../images/icon/catalog/catalog-8.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-1.jpg',
+            'title' => 'Запорізька Січ',
+            'icon' => '../../images/icon/catalog/catalog-1.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-2.jpg',
+            'title' => 'Святилище',
+            'icon' => '../../images/icon/catalog/catalog-2.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-3.jpg',
+            'title' => 'Скіфський стан',
+            'icon' => '../../images/icon/catalog/catalog-3.svg',
+        ],
+        [
+            'image' => '../../images/content/main/catalog/catalog-4.jpg',
+            'title' => 'Дендропарк',
+            'icon' => '../../images/icon/catalog/catalog-4.svg',
         ],
     ],
 ];

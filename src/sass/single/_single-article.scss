@@ -1,6 +1,6 @@
-.main-single {
+.secondary-page {
 
-  .single-intro {
+  .secondary-intro {
     position: relative;
     @extend %img;
     padding: 200px 0;
@@ -14,7 +14,7 @@
     }
   }
 
-  .single-content {
+  .secondary-content {
     position: relative;
     margin: -100px 0 100px;
     z-index: 10;

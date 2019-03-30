@@ -7,8 +7,8 @@ require_once('../header.php');
 ?>
 
     <!-- Single Article -->
-    <section id="single-article" class="main-single">
-        <div class="single-intro" style="background-image:url('<?= $single_article['intro_bg_img']; ?>');">
+    <section id="single-article" class="secondary-page">
+        <div class="secondary-intro" style="background-image:url('<?= $single_article['intro_bg_img']; ?>');">
             <div class="container-fluid">
                 <div class="row offset-sm-1">
                     <div class="col-auto">
@@ -28,11 +28,11 @@ require_once('../header.php');
                 </div>
             </div>
         </div>
-        <div class="single-content">
+        <div class="secondary-content">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <article class="single-content-item">
+                        <article class="secondary-content-item">
                             <header class="article-header">
                                 <div class="article-slider">
                                     <?php foreach ($single_article['slider'] as $item) : ?>

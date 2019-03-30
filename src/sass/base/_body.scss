@@ -32,3 +32,7 @@ ul {
     margin: 0;
     @extend .list-unstyled;
 }
+
+svg {
+    transition: .5s;
+}
