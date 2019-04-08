@@ -2,7 +2,7 @@
 
 require_once('../store.php');
 
-require_once('../header.php');
+require_once('../header-secondary.php');
 
 ?>
 

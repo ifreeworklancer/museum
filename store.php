@@ -2,12 +2,11 @@
 $app_title = 'Museum';
 
 $nav = [
-    '/page/catalog.php' => 'Каталог',
-    '/pages/stock.php' => 'Акции',
-    '/pages/about.php' => 'О нас',
-    '/pages/delivery.php' => 'Оплата и доставка',
-    '/pages/blog.php' => 'Блок',
-    '/pages/contacts.php' => 'Контакты',
+    '/catalog/catalog-object.php' => 'Об’єкти',
+    '/catalog/catalog-news.php' => 'Новини',
+    '#' => 'Галерея',
+    '/single/single-object.php' => 'Туристичний об’єкт',
+    '/single/single-article.php' => 'Стаття',
 ];
 
 $intro = [

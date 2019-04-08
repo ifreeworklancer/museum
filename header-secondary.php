@@ -9,7 +9,7 @@
         <?= $app_title ?>
     </title>
 
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../../fonts/font.css">
     <link rel="stylesheet" href="../../dist/app.css">
 </head>
@@ -19,7 +19,7 @@
 <?php require_once('partials/svgs.php'); ?>
 
 <!-- App-header -->
-<header id="app-header">
+<header id="app-header" class="header-secondary">
     <div class="container-fluid">
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light pl-3 pr-3 pl-lg-4 pl-lg3 w-100">

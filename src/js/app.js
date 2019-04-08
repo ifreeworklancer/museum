@@ -2,7 +2,6 @@ import jquery from 'jquery';
 import Flickity from 'flickity';
 import 'flickity-as-nav-for';
 import ScrollReveal from 'scrollreveal';
-import IMask from 'imask';
 
 window.jQuery = window.$ = jquery;
 
@@ -101,17 +100,6 @@ window.jQuery = window.$ = jquery;
         $(this).parents('.form-search').removeClass('is-active');
     });
 
-
-    /**
-     * Phone mask
-     * @type {*|jQuery.fn.init|jQuery|HTMLElement}
-     */
-    const phones = $('[type="tel"]');
-    Array.from(phones).forEach(phone => {
-        new IMask(phone, {
-            mask: '+{38} (000) 000-00-00'
-        });
-    });
 
     $(document).on('keyup', function (e) {
         if (e.keyCode === 27) {
@@ -247,7 +235,7 @@ window.jQuery = window.$ = jquery;
     });
 
     //Map
-    if($('#object-maps').length > 0) {
+    if ($('#object-maps').length > 0) {
         var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
         mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94dXNlcm11c2V1bSIsImEiOiJjanRya2FoZXQwcjVlNDVtdTNlOWNoMzUyIn0.oMm4w0lY15eiIFOcl-gkIA';

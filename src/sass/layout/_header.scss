@@ -2,13 +2,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(56, 64, 73, 0);
+  background: rgba(56, 64, 73, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 999;
   padding: 5px 0;
   transition: .5s;
 
-  &.is-fixed {
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 0;
+    background: rgba(56, 64, 73, 0);
+  }
+
+
+  &.is-fixed, &.header-secondary {
     background: rgba(56, 64, 73, 0.6);
 
     .site-nav {
@@ -20,10 +26,6 @@
         }
       }
     }
-  }
-
-  @media (min-width: map_get($grid-breakpoints, lg)) {
-    padding: 0;
   }
 
   .navbar-brand {
