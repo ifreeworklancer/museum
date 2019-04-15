@@ -282,3 +282,47 @@ $catalog_object = [
         ],
     ],
 ];
+
+$catalog_gallery = [
+    'intro_bg_img' => '../../images/content/single/article/article-bg.jpg',
+    'main_title' => 'Галерея',
+    'item' => [
+        '../../images/content/catalog/gallery/gallery-1.jpg',
+        '../../images/content/catalog/gallery/gallery-2.jpg',
+        '../../images/content/catalog/gallery/gallery-3.jpg',
+        '../../images/content/catalog/gallery/gallery-4.jpg',
+        '../../images/content/catalog/gallery/gallery-5.jpg',
+        '../../images/content/catalog/gallery/gallery-5.jpg',
+        '../../images/content/catalog/gallery/gallery-7.jpg',
+    ],
+    'slider' => [
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-1.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores dicta est eveniet nam pariatur quibusdam quo ratione rerum saepe.',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-2.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores dicta est eveniet nam ',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-3.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam.',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-4.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores ',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-5.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores dicta est eveniet nam pariatur quibusdam quo ratione rerum saepe. Aliquam asperiores dicta est eveniet nam pariatur.',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-5.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores dicta est eveniet nam pariatur',
+      ],
+      [
+          'image' => '../../images/content/catalog/gallery/gallery-7.jpg',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      ],
+    ],
+];

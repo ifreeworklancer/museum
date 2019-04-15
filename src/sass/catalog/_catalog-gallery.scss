@@ -1,0 +1,22 @@
+#catalog-gallery {
+
+  .gallery-wrapper {
+    .gallery-item {
+      width: 100%;
+      padding: 0 10px 20px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        width: 50%;
+      }
+
+      @media (min-width: map_get($grid-breakpoints, lg)) {
+        width: 33%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

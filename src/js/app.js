@@ -2,6 +2,7 @@ import jquery from 'jquery';
 import Flickity from 'flickity';
 import 'flickity-as-nav-for';
 import ScrollReveal from 'scrollreveal';
+import Masonry from 'masonry-layout';
 
 window.jQuery = window.$ = jquery;
 
@@ -113,51 +114,43 @@ window.jQuery = window.$ = jquery;
     /**
      * Modal
      */
-    // var categoryCarModal = $('.custom-modal--category-car');
-    // var connectModal = $('.custom-modal--connect');
-    // var orderModal = $('.custom-modal--order');
-    // var closeModal = $('.close-modal');
-    // var modalMask = $('.modal-mask');
-    //
-    // $('.open-connect').on('click', function (e) {
-    //     e.preventDefault();
-    //     $(connectModal).addClass('active');
-    //     $(modalMask).addClass('active');
-    // });
-    //
-    // $('.open-order').on('click', function (e) {
-    //     e.preventDefault();
-    //     $(orderModal).addClass('active');
-    //     $(modalMask).addClass('active');
-    //     $("[name='car_title']").val($(this).data('cartitle'));
-    // });
-    //
-    // if($(window).width() > 1024) {
-    //     $('[data-indexCar]').on('click', function () {
-    //         $(categoryCarModal).addClass('active');
-    //         $(modalMask).addClass('active');
-    //     });
-    // }
-    //
-    // $(closeModal).on('click', function () {
-    //     $(categoryCarModal).removeClass('active');
-    //     $(connectModal).removeClass('active');
-    //     $(orderModal).removeClass('active');
-    //     $(modalMask).removeClass('active');
-    // });
-    //
-    // $(modalMask).on('click', function () {
-    //     $(categoryCarModal).removeClass('active');
-    //     $(connectModal).removeClass('active');
-    //     $(orderModal).removeClass('active');
-    //     $(modalMask).removeClass('active');
-    // });
+    var galleryModal = $('.custom-modal--gallery');
+    var closeModal = $('.close-modal');
+    var modalMask = $('.modal-mask');
+
+    $('.open-connect').on('click', function (e) {
+        e.preventDefault();
+        $(galleryModal).addClass('active');
+        $(modalMask).addClass('active');
+    });
+
+
+    $(closeModal).on('click', function () {
+        $(galleryModal).removeClass('active');
+        $(modalMask).removeClass('active');
+    });
+
+    $(modalMask).on('click', function () {
+        $(galleryModal).removeClass('active');
+        $(modalMask).removeClass('active');
+    });
+
+
+    /**
+     * Masonry
+     */
+    if (document.querySelector('.gallery-item')) {
+        var elem_masonry1 = document.querySelector('.gallery-wrapper');
+
+        new Masonry(elem_masonry1, {
+            itemSelector: '.gallery-item'
+        });
+    }
 
 
     /**
      * Sliders gallery
      */
-
     var elem1 = document.querySelector('.object-slider');
     var galleryNavFor = document.querySelector('.object-asNavFor-slider');
 
@@ -217,6 +210,46 @@ window.jQuery = window.$ = jquery;
         nextArrowArticle.addEventListener('click', function () {
             flkty2.next(true, false);
         });
+    }
+
+    if (document.querySelector('.gallery-slider')) {
+        let flkty3 = new Flickity('.gallery-slider', {
+            wrapAround: true,
+            prevNextButtons: false,
+            cellAlign: 'center',
+            draggable: true,
+            pageDots: false,
+            contain: true,
+            initialIndex: 0,
+            on: {
+                change: function( index ) {
+                    document.getElementById('sliderCounterActive').innerHTML = `${index + 1}`
+                }
+            }
+        });
+
+        $('[data-indexImg]').on('click', function () {
+            $(galleryModal).addClass('active');
+            $(modalMask).addClass('active');
+            flkty3.select($(this).data('indeximg') - 1);
+        });
+
+        let prevArrowReviews = document.querySelector('.slider-arrow-item--prev--gallery');
+
+        prevArrowReviews.addEventListener('click', function () {
+            flkty3.previous(true, false);
+        });
+
+        let nextArrowReviews = document.querySelector('.slider-arrow-item--next--gallery');
+
+        nextArrowReviews.addEventListener('click', function () {
+            flkty3.next(true, false);
+        });
+
+        if (document.querySelector('.gallery-slider-item')) {
+            let mainSliderContAll = $(".gallery-slider-item").length;
+            $('.slider-counter-all').text(mainSliderContAll);
+        }
     }
 
 

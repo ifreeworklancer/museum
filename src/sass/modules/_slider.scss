@@ -40,3 +40,26 @@
     }
   }
 }
+
+.gallery-slider {
+  position: relative;
+
+  &-item {
+    width: 100%;
+    margin: 0 10px;
+    height: 70vh;
+
+    &__img {
+      height: 70%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    &__description {
+      color: #fff;
+      height: 30%;
+      padding-top: 40px;
+    }
+  }
+}
