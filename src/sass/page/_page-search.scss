@@ -1,0 +1,44 @@
+#search-page {
+
+  .secondary-intro {
+    padding: 0;
+  }
+
+  .section-description {
+
+    span {
+      color: $body-color;
+      font-size: 1.5rem;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .search-row {
+    margin: 30px 0 45px;
+  }
+
+  .search-item-img {
+    height: 100%;
+    min-height: 250px;
+    @extend %img;
+  }
+
+  .search-item {
+    margin-top: 20px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      margin-bottom: 25px;
+    }
+  }
+
+  .secondary-content {
+    margin: 70px 0 100px;
+  }
+}
